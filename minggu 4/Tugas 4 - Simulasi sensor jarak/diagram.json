@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "author": "FADILIAN RISDIANTO",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -71.96, "attrs": {} },
+      { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": -46.5, "left": 111.1, "attrs": {} }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+      [ "ultrasonic1:VCC", "esp:3V3", "red", [ "h-96", "v-96", "h-153.75" ] ],
+      [ "ultrasonic1:TRIG", "esp:5", "green", [ "v0" ] ],
+      [ "ultrasonic1:ECHO", "esp:18", "green", [ "v0" ] ],
+      [ "ultrasonic1:GND", "esp:GND.2", "black", [ "v19.2", "h-154.8", "v-38.4" ] ]
+    ],
+    "dependencies": {}
+  }
